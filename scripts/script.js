@@ -168,8 +168,13 @@ memoryApp.flipCard = function() {
     // second click
     memoryApp.hasFlippedCard = false;
     memoryApp.secondCard = this;
+    //check for match
+    memoryApp.isMatched();
+  }
+};
 
-    // check for match
+memoryApp.isMatched = function() {
+
     if (memoryApp.firstCard.dataset.card === memoryApp.secondCard.dataset.card) {
       // if cards match, remove event listeners 
       $(memoryApp.firstCard).off('click keypress', memoryApp.flipCard)
@@ -181,11 +186,6 @@ memoryApp.flipCard = function() {
         $(memoryApp.secondCard).toggleClass('flip')
       },800);
     }
-  }
-};
-
-memoryApp.isFlipped = function() {
-
 };
 
 // document ready
