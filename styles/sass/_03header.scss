@@ -1,0 +1,46 @@
+
+// header dimensions/positioning
+
+header {
+  background-color: #9799BA;;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.startPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  background-color: #FEADB9;
+  padding: 5rem;
+  border: .5rem solid #BC85A3 ;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.startButton {
+  font-size: 4rem;
+  background-color: #F9E1E0;
+  padding: .5rem 1rem;
+  border: .5rem solid #BC85A3;
+  border-radius: 1rem;
+  transition: all .3s;
+  scale: (1);
+
+  //hover/focus states
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+  // active
+  &:active {
+    transform: scale(.97);
+  }
+}

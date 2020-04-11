@@ -1,0 +1,72 @@
+
+.gameBoard {
+  height: 100vh;
+  display: flex;
+  background-color: #FAFAFA;
+
+  &.hide {
+    display: none;
+  }
+  
+}
+
+.cardContainer { 
+  // border: 2px solid red;
+  width: 600px;
+  height: auto; 
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;  
+  perspective: 1000px;
+}
+
+.memoryCard {
+  width: calc(150px - 10px);
+  height: calc(150px - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transition: all ease-in-out .3s;
+  transform-style: preserve-3d;
+
+  // hover/focus states
+  &:hover,
+  &:focus {
+    transform: scale(1.075);
+  }
+  // active state
+  &:active {
+    transform: scale(.97);
+    transition: all .2s;
+  }
+
+  // flip animation
+  &.flip {
+    transform: rotateY(180deg);
+  }
+  
+}
+
+
+.frontFace,
+.backFace {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+}
+
+.frontFace,
+.backFace {
+  border: .2rem solid #BC85A3;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+}
+
+.frontFace {
+  transform: rotateY(180deg);
+}
+
+
+// sweet alert
+
