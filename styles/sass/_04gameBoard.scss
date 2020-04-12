@@ -3,7 +3,7 @@
   height: 100vh;
   display: flex;
   background-color: #FAFAFA;
-  margin: 0 auto;
+  margin: 5px auto;
 
   &.hide {
     display: none;
@@ -14,14 +14,13 @@
 .cardContainer { 
   max-width: 600px;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   perspective: 1000px;
-  display: flex;
 }
 
 .memoryCard {
-  width: calc(150px - 10px);
-  height: calc(150px - 10px);
+  flex: 1 0 20%;
   margin: 5px;
   position: relative;
   transform: scale(1);

@@ -107,11 +107,11 @@ memoryApp.cards = [
 memoryApp.startButton = $('.startButton'); // header start button
 memoryApp.cardContainer = $('.cardContainer'); // memory card container
 memoryApp.memoryCard = $('.memoryCard'); //memory cards
-memoryApp.firstCard = null;
-memoryApp.secondCard = null;
-memoryApp.hasFlippedCard= false;
-memoryApp.lockBoard = false;
-memoryApp.matchedCard = 0;
+memoryApp.firstCard = null; // first selected card variable 
+memoryApp.secondCard = null; // second selected card variable
+memoryApp.hasFlippedCard= false; // has card flipped boolean
+memoryApp.lockBoard = false; // lock board for preventing multiclicks boolean
+memoryApp.matchedCard = 0; // variable for counting matches
 
 
 // init function
@@ -142,16 +142,15 @@ memoryApp.playGame = function() {
       confirmButtonText: 'Play Game ',
     });
   }, 1000);
-  // call dealCards / deals cards
 };
 
-// prevent double clicking of start button which makes cards not load
+// prevents double clicking of start button which makes cards prevents card from loading
 memoryApp.disableStartButton = function() {
   $(memoryApp.startButton).off('click')
 };
 
 
-// 2. shuffle cards and append them to the dom in the cardsContainer using a for loop, using Fisher–Yates shuffle algorithm.
+// 2. shuffles cards and appends them to the dom in the cardsContainer div using a "for" loop (Fisher–Yates shuffle algorithm)
 
 memoryApp.shuffleCards = function(array) {
   let newPos;
@@ -166,7 +165,7 @@ memoryApp.shuffleCards = function(array) {
   return array;
 };
 
-// 3. create a new array of random cards from the for loop, and store them into a new variable of randomizedCards, use that new array to append the array/ object information into the DOM, into a div of card container, when user clicks lets play.
+// 3. create a new array of random cards from the "for" loop, and store them into a new variable of randomizedCards, use that new array to append the array / object information into the DOM, into a div of card container, when user clicks lets play.
 memoryApp.randomizedCards = memoryApp.shuffleCards(memoryApp.cards);
 
 memoryApp.dealCards = () => {
@@ -204,14 +203,13 @@ memoryApp.flipCard = function() {
   }
 };
 
-// 5. function checks for match using a if statement, the if statement checks to see if cards have matching data values
+// 5. function checks for match using an if statement, the if statement checks to see if cards have matching data values
 memoryApp.isMatched = function() {
+
     if (memoryApp.firstCard.dataset.card === memoryApp.secondCard.dataset.card) {
       // if cards match, remove event listeners 
-      
       memoryApp.disableCards();
       memoryApp.matchedCard ++;
-      console.log(memoryApp.matchedCard);
       // if all eight matches found show you one alert
       if(memoryApp.matchedCard === 8) {
         memoryApp.gameOver()
