@@ -136,9 +136,9 @@ memoryApp.playGame = function() {
   setTimeout(() => {
     Swal.fire({
       title: 'Instructions',
-      text: 'Help all the cacti find their friends and return to the terraium!',
+      text: 'Help all the cacti find their friends and return to the terrarium!',
       icon: '',
-      confirmButtonText: 'Cool',
+      confirmButtonText: 'Lets Start!',
     });
   }, 1000);
   // call dealCards / deals cards
@@ -235,12 +235,12 @@ memoryApp.unflipCards = function() {
 
 // 8. 
 
-memoryApp.gameOver = function(flipped) {
-  flipped = $('.cardFlip').length;
-  if (flipped === 16) {
+// memoryApp.gameOver = function(flipped) {
+//   flipped = $('.cardFlip').length;
+//   if (flipped === 16) {
     
-  }
-};
+//   }
+// };
 
 
 
