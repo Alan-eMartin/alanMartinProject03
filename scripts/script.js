@@ -111,7 +111,7 @@ memoryApp.firstCard = null;
 memoryApp.secondCard = null;
 memoryApp.hasFlippedCard= false;
 memoryApp.lockBoard = false;
-memoryApp.matchedCard = 7;
+memoryApp.matchedCard = 0;
 
 
 // init function
@@ -242,6 +242,7 @@ memoryApp.unflipCards = function() {
 
 }
 
+// 8. when all cards are matched, message comes up and asks player if they would like to try again. On click the page is reloaded.
 memoryApp.gameOver = function() {
   Swal.fire({
     title: 'You did it!!',
@@ -249,18 +250,13 @@ memoryApp.gameOver = function() {
     icon: '',
     confirmButtonText: 'Try Again?',
   });
+  // click play again and page reloads
   setTimeout(() => {
     $(document).click(function () {
       location.reload();
     }), 1500;
   })
 }
-
-// memoryApp.resetGame() {
-//   $(document).click(function () {
-//     location.reload();
-//   });
-// }
 
 // document ready
 $(function() {
