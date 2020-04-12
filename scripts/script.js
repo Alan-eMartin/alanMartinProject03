@@ -111,6 +111,7 @@ memoryApp.firstCard = null;
 memoryApp.secondCard = null;
 memoryApp.hasFlippedCard= false;
 memoryApp.lockBoard = false;
+memoryApp.matchedCard = 0;
 
 
 // init function
@@ -138,7 +139,7 @@ memoryApp.playGame = function() {
       title: 'Instructions',
       text: 'Help all the cacti find their friends and return to the terrarium!',
       icon: '',
-      confirmButtonText: 'Play Game',
+      confirmButtonText: 'Play Game ',
     });
   }, 1000);
   // call dealCards / deals cards
@@ -207,7 +208,14 @@ memoryApp.flipCard = function() {
 memoryApp.isMatched = function() {
     if (memoryApp.firstCard.dataset.card === memoryApp.secondCard.dataset.card) {
       // if cards match, remove event listeners 
+      
       memoryApp.disableCards();
+      memoryApp.matchedCard ++;
+      console.log(memoryApp.matchedCard);
+      // if all eight matches found show you one alert
+      if(memoryApp.matchedCard === 8) {
+        memoryApp.gameOver()
+      }
     } else {
       // if not matched, remove class of flip
       memoryApp.unflipCards();
@@ -231,17 +239,38 @@ memoryApp.unflipCards = function() {
 
     memoryApp.lockBoard = false;
   }, 800);
+
 }
 
-// 8. 
+memoryApp.gameOver = function() {
+  Swal.fire({
+    title: 'You did it!!',
+    text: 'All the cacti have returned safely to the terrarium!',
+    icon: '',
+    confirmButtonText: 'Try Again?',
+  });
+  memoryApp.resetGame()
 
-// memoryApp.gameOver = function(flipped) {
-//   flipped = $('.cardFlip').length;
-//   if (flipped === 16) {
-    
-//   }
+}
+
+memoryApp.resetGame = function() {
+  $(memoryApp.memoryCard).toggleClass('flip')
+  $()
+  $(document).click(function () {
+    location.reload();
+  });
+}
+
+
+// 8. when all cards are flipped, use if statement to let computer
+
+// memoryApp.gameOver = function() {
+//   // check if all cards are matched
+//   // if cards are all matched flip cards back over
+//   // reshuffle cards array
+//   // prompt user thay they won
+//   // ask to play again
 // };
-
 
 
 // document ready
