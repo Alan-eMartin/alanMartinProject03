@@ -138,7 +138,7 @@ memoryApp.playGame = function() {
       title: 'Instructions',
       text: 'Help all the cacti find their friends and return to the terrarium!',
       icon: '',
-      confirmButtonText: 'Cool',
+      confirmButtonText: 'Play Game',
     });
   }, 1000);
   // call dealCards / deals cards
