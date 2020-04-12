@@ -214,13 +214,13 @@ memoryApp.isMatched = function() {
     }
 };
 
-// disables cards from being clicked when they are matched.
+// 6. disables cards from being clicked when they are matched.
 memoryApp.disableCards = function() {
   $(memoryApp.firstCard).off('click keypress', memoryApp.flipCard)
   $(memoryApp.secondCard).off('click keypress', memoryApp.flipCard)
 }
 
-// flip cards back over if no match is found
+// 7. flip cards back over if no match is found
 memoryApp.unflipCards = function() {
 
   memoryApp.lockBoard = true;
@@ -232,6 +232,17 @@ memoryApp.unflipCards = function() {
     memoryApp.lockBoard = false;
   }, 800);
 }
+
+// 8. 
+
+memoryApp.gameOver = function(flipped) {
+  flipped = $('.cardFlip').length;
+  if (flipped === 16) {
+    
+  }
+};
+
+
 
 // document ready
 $(function() {
