@@ -111,7 +111,7 @@ memoryApp.firstCard = null;
 memoryApp.secondCard = null;
 memoryApp.hasFlippedCard= false;
 memoryApp.lockBoard = false;
-memoryApp.matchedCard = 0;
+memoryApp.matchedCard = 7;
 
 
 // init function
@@ -249,29 +249,18 @@ memoryApp.gameOver = function() {
     icon: '',
     confirmButtonText: 'Try Again?',
   });
-  memoryApp.resetGame()
-
+  setTimeout(() => {
+    $(document).click(function () {
+      location.reload();
+    }), 1500;
+  })
 }
 
-memoryApp.resetGame = function() {
-  $(memoryApp.memoryCard).toggleClass('flip')
-  $()
-  $(document).click(function () {
-    location.reload();
-  });
-}
-
-
-// 8. when all cards are flipped, use if statement to let computer
-
-// memoryApp.gameOver = function() {
-//   // check if all cards are matched
-//   // if cards are all matched flip cards back over
-//   // reshuffle cards array
-//   // prompt user thay they won
-//   // ask to play again
-// };
-
+// memoryApp.resetGame() {
+//   $(document).click(function () {
+//     location.reload();
+//   });
+// }
 
 // document ready
 $(function() {

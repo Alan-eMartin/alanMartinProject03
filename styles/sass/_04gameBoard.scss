@@ -3,6 +3,7 @@
   height: 100vh;
   display: flex;
   background-color: #FAFAFA;
+  margin: 0 auto;
 
   &.hide {
     display: none;
@@ -11,14 +12,11 @@
 }
 
 .cardContainer { 
-  // border: 2px solid red;
-  width: 600px;
-  min-width: 350px;
-  height: auto; 
+  max-width: 600px;
   display: flex;
   flex-wrap: wrap;
-  margin: auto;  
   perspective: 1000px;
+  display: flex;
 }
 
 .memoryCard {
@@ -45,9 +43,23 @@
   &.flip {
     transform: rotateY(180deg);
   }
-  
-}
 
+  @media (max-width: 600px) {
+    width: calc(125px - 10px);
+    height: calc(125px - 10px);
+  }
+
+  @media (max-width: 521px) {
+      width: calc(100px - 10px);
+      height: calc(100px - 10px);
+    }
+  
+  @media (max-width: 420px) {
+    width: calc(75px - 10px);
+    height: calc(75px - 10px);
+  }
+
+}
 
 .frontFace,
 .backFace {

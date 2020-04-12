@@ -334,6 +334,7 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   background-color: #FAFAFA;
+  margin: 0 auto;
 }
 
 .gameBoard.hide {
@@ -341,16 +342,15 @@ h1 {
 }
 
 .cardContainer {
-  width: 600px;
-  height: auto;
+  max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: auto;
   -webkit-perspective: 1000px;
           perspective: 1000px;
+  display: flex;
 }
 
 .memoryCard {
@@ -381,6 +381,27 @@ h1 {
 .memoryCard.flip {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+@media (max-width: 600px) {
+  .memoryCard {
+    width: calc(125px - 10px);
+    height: calc(125px - 10px);
+  }
+}
+
+@media (max-width: 521px) {
+  .memoryCard {
+    width: calc(100px - 10px);
+    height: calc(100px - 10px);
+  }
+}
+
+@media (max-width: 420px) {
+  .memoryCard {
+    width: calc(75px - 10px);
+    height: calc(75px - 10px);
+  }
 }
 
 .frontFace,
