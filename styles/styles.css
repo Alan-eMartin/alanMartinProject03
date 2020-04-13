@@ -356,6 +356,12 @@ h1 {
   color: #BC85A3;
 }
 
+@media (max-width: 450px) {
+  .thanksFreepik {
+    font-size: .4rem;
+  }
+}
+
 .gameBoard {
   height: 100vh;
   display: -webkit-box;

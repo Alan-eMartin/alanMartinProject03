@@ -68,5 +68,10 @@ h1 {
     text-decoration: none;
     color: #BC85A3;
   }
-  
+
+  // font size media queries for freepik
+  @media (max-width: 450px) {
+    font-size: .4rem;
+  }
+
 }
