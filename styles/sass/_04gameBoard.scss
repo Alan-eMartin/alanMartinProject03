@@ -3,11 +3,11 @@
   height: 100vh;
   display: flex;
   background-color: #FAFAFA;
-
+  // hides gameboard until start button is clicked
   &.hide {
     display: none;
   }
-  
+
 }
 
 .cardContainer { 
@@ -44,17 +44,17 @@
   &.flip {
     transform: rotateY(180deg);
   }
-
+  // memory card media queries
   @media (max-width: 600px) {
     width: calc(125px - 10px);
     height: calc(125px - 10px);
   }
-
+  // memory card media queries
   @media (max-width: 521px) {
-      width: calc(100px - 10px);
-      height: calc(100px - 10px);
-    }
-  
+    width: calc(100px - 10px);
+    height: calc(100px - 10px);
+  }
+  // memory card media queries
   @media (max-width: 420px) {
     width: calc(75px - 10px);
     height: calc(75px - 10px);
@@ -67,7 +67,6 @@
   width: 100%;
   height: 100%;
   position: absolute;
-
 }
 
 .frontFace,
@@ -80,9 +79,3 @@
 .frontFace {
   transform: rotateY(180deg);
 }
-
-
-
-// sweet alert
-
-

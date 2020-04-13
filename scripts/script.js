@@ -1,4 +1,3 @@
-/* eslint-disable */
 // nameSpacing Object
 const memoryApp = {};
 
@@ -132,7 +131,8 @@ memoryApp.playGame = function() {
   setTimeout(() => {
     Swal.fire({
       title: 'Instructions',
-      text: 'Help all the cacti find their friends and return to the terrarium!',
+      text:
+        'Help all the cacti find their friends and return to the terrarium!',
       icon: '',
       confirmButtonText: 'Play Game ',
     });
@@ -234,14 +234,14 @@ memoryApp.gameOver = function() {
     title: 'You did it!!',
     text: 'All the cacti have returned safely to the terrarium!',
     icon: '',
-    confirmButtonText: 'Try Again?', 
+    confirmButtonText: 'Try Again?',
   });
   // make-shift idea to prevent page reload from firing- note I tried ".this" and that did not work, this was the only thing I could do, will come back and edit for portfolio.
   setTimeout(() => {
-    $(document).click(function () {
+    $(document).click(function() {
       location.reload();
     });
-  })
+  });
 };
 
 // document ready
