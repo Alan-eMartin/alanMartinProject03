@@ -110,7 +110,7 @@ memoryApp.firstCard = null; // first selected card variable
 memoryApp.secondCard = null; // second selected card variable
 memoryApp.hasFlippedCard = false; // has card flipped boolean
 memoryApp.lockBoard = false; // lock board for preventing multiclicks boolean
-memoryApp.matchCount = 0; // variable for counting matches
+memoryApp.matchCount = 7; // variable for counting matches
 
 // init function
 
@@ -204,7 +204,7 @@ memoryApp.isMatched = function() {
     memoryApp.disableCards();
     memoryApp.matchCount++;
     // if all eight matches found show you one alert
-    if (memoryApp.matchedCard == 8) {
+    if (memoryApp.matchCount === 8) {
       memoryApp.gameOver();
     }
   } else {
@@ -222,7 +222,7 @@ memoryApp.disableCards = function() {
 // 7. flip cards back over if no match is found
 memoryApp.unflipCards = function() {
   memoryApp.lockBoard = true;
-  // time out allows cards finishing flipping over, if no time out set second cards flip class is remove before it even flips
+
   setTimeout(() => {
     $(memoryApp.firstCard).toggleClass('flip');
     $(memoryApp.secondCard).toggleClass('flip');
@@ -243,7 +243,6 @@ memoryApp.gameOver = function() {
   $(document).then(function() {
     location.reload();
   });
-  
 };
 
 // document ready
