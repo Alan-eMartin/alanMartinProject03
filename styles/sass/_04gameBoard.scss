@@ -13,7 +13,7 @@
 .cardContainer { 
   max-width: 600px;
   display: flex;
-  // justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   perspective: 1000px;
 }
