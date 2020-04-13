@@ -233,7 +233,7 @@ memoryApp.unflipCards = function() {
 memoryApp.gameOver = function() {
   Swal.fire({
     title: 'Congratulations! ',
-    text: 'Special thanks to the following: <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>',
+    text: 'You did it! All the Cacti returned safely back to their their terrarium!',
     confirmButtonText: 'Try Again?',
   });
   // make-shift idea to prevent page reload from firing- note I tried ".this" and that did not work, this was the only thing I could do, will come back and edit for portfolio.
