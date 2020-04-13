@@ -334,7 +334,6 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   background-color: #FAFAFA;
-  display: flex;
 }
 
 .gameBoard.hide {
@@ -346,8 +345,6 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-perspective: 1000px;
@@ -355,9 +352,8 @@ h1 {
 }
 
 .memoryCard {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20%;
-          flex: 1 0 20%;
+  width: calc(125px - 10px);
+  height: calc(125px - 10px);
   margin: 5px;
   position: relative;
   -webkit-transform: scale(1);
