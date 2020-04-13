@@ -110,7 +110,7 @@ memoryApp.firstCard = null; // first selected card variable
 memoryApp.secondCard = null; // second selected card variable
 memoryApp.hasFlippedCard = false; // has card flipped boolean
 memoryApp.lockBoard = false; // lock board for preventing multiclicks boolean
-memoryApp.matchCount = 7; // variable for counting matches
+memoryApp.matchCount = 0; // variable for counting matches
 
 // init function
 
