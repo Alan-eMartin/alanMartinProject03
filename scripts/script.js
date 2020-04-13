@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 // nameSpacing Object
 const memoryApp = {};
 
@@ -113,9 +112,8 @@ memoryApp.lockBoard = false; // lock board for preventing multiclicks boolean
 memoryApp.matchCount = 0; // variable for counting matches
 
 // init function
-
 memoryApp.init = function() {
-  // lets play button
+  // let's play button event listener
   $(memoryApp.startButton).on('click', memoryApp.playGame);
   // deals cards to gameboard / card container
   memoryApp.dealCards();
@@ -134,20 +132,19 @@ memoryApp.playGame = function() {
   setTimeout(() => {
     Swal.fire({
       title: 'Instructions',
-      text:
-        'Help all the cacti find their friends and return to the terrarium!',
+      text: 'Help all the cacti find their friends and return to the terrarium!',
       icon: '',
       confirmButtonText: 'Play Game ',
     });
   }, 1000);
 };
 
-// prevents double clicking of start button which makes cards prevents card from loading
+// disables multi-clicking of start button, to prevent over-population of cards
 memoryApp.disableStartButton = function() {
   $(memoryApp.startButton).off('click');
 };
 
-// 2. shuffles cards and appends them to the dom in the cardsContainer div using a "for" loop (Fisher–Yates shuffle algorithm)
+// 2. shuffles cards and creates a randomized card array loop (Fisher–Yates shuffle algorithm)
 
 memoryApp.shuffleCards = function(array) {
   let newPos;
@@ -222,7 +219,7 @@ memoryApp.disableCards = function() {
 // 7. flip cards back over if no match is found
 memoryApp.unflipCards = function() {
   memoryApp.lockBoard = true;
-
+  // timeout allows cards to be flipped fully before event listener is removed
   setTimeout(() => {
     $(memoryApp.firstCard).toggleClass('flip');
     $(memoryApp.secondCard).toggleClass('flip');
@@ -237,12 +234,14 @@ memoryApp.gameOver = function() {
     title: 'You did it!!',
     text: 'All the cacti have returned safely to the terrarium!',
     icon: '',
-    confirmButtonText: 'Try Again?',
+    confirmButtonText: 'Try Again?', 
   });
-  // click play again and page reloads
-  $(document).then(function() {
-    location.reload();
-  });
+  // make-shift idea to prevent page reload from firing- note I tried ".this" and that did not work, this was the only thing I could do, will come back and edit for portfolio.
+  setTimeout(() => {
+    $(document).click(function () {
+      location.reload();
+    });
+  })
 };
 
 // document ready
