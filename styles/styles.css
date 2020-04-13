@@ -326,8 +326,8 @@ h1 {
 }
 
 .startButton:hover, .startButton:focus {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .startButton:active {
@@ -342,12 +342,13 @@ h1 {
 }
 
 .thanksFreepik {
+  background-color: #F9E1E0;
+  font-size: 1rem;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   padding: .5rem;
-  background-color: #F9E1E0;
 }
 
 .thanksFreepik a {
@@ -385,8 +386,8 @@ h1 {
 }
 
 .memoryCard {
-  width: calc(125px - 10px);
-  height: calc(125px - 10px);
+  width: calc(135px - 10px);
+  height: calc(135px - 10px);
   margin: 5px;
   position: relative;
   -webkit-transform: scale(1);

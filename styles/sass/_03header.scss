@@ -40,7 +40,7 @@ h1 {
   //hover/focus states
   &:hover,
   &:focus {
-    transform: scale(1.01);
+    transform: scale(1.1);
   }
   // active state
   &:active {
@@ -56,15 +56,17 @@ h1 {
 
 // thanks freepik for the images!
 .thanksFreepik {
+  background-color: #F9E1E0;
+  font-size: 1rem;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   padding: .5rem;
-  background-color: #F9E1E0;
 
   a {
     text-decoration: none;
     color: #BC85A3;
   }
+  
 }
