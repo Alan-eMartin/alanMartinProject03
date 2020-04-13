@@ -50,9 +50,19 @@
     height: calc(125px - 10px);
   }
   // memory card media queries
-  @media (max-width: 521px) {
-    width: calc(100px - 10px);
-    height: calc(100px - 10px);
+  @media (max-width: 555px) {
+    width: calc(110px - 10px);
+    height: calc(110px - 10px);
+  }
+  // memory card media queries
+  @media (max-width: 522px) {
+    width: calc(105px - 10px);
+    height: calc(105px - 10px);
+  }
+  // memory card media queries
+  @media (max-width: 515px) {
+    width: calc(92px - 10px);
+    height: calc(92px - 10px);
   }
   // memory card media queries
   @media (max-width: 420px) {
