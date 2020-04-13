@@ -23,6 +23,11 @@ h1 {
   border: .5rem solid #BC85A3 ;
   border-radius: 1rem;
   margin-bottom: 2rem;
+
+  // h1 media queries
+  @media (max-width: 450px) {
+    font-size: 4rem;
+  }
 }
 
 .startButton {
@@ -43,4 +48,10 @@ h1 {
   &:active {
     transform: scale(.97);
   }
+
+  // button media queries
+  @media (max-width: 450px) {
+    font-size: 2rem;
+  }
+
 }

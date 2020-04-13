@@ -307,6 +307,12 @@ h1 {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 450px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
 .startButton {
   font-size: 4rem;
   background-color: #F9E1E0;
@@ -326,6 +332,12 @@ h1 {
 .startButton:active {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
+}
+
+@media (max-width: 450px) {
+  .startButton {
+    font-size: 2rem;
+  }
 }
 
 .gameBoard {
