@@ -282,6 +282,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .startPage {
@@ -338,6 +339,20 @@ h1 {
   .startButton {
     font-size: 2rem;
   }
+}
+
+.thanksFreepik {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: .5rem;
+  background-color: #F9E1E0;
+}
+
+.thanksFreepik a {
+  text-decoration: none;
+  color: #BC85A3;
 }
 
 .gameBoard {

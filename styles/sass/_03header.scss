@@ -4,6 +4,7 @@ header {
   display: flex;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .startPage {
@@ -41,7 +42,7 @@ h1 {
   &:focus {
     transform: scale(1.01);
   }
-  // active
+  // active state
   &:active {
     transform: scale(.97);
   }
@@ -51,4 +52,19 @@ h1 {
     font-size: 2rem;
   }
 
+}
+
+// thanks freepik!
+.thanksFreepik {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: .5rem;
+  background-color: #F9E1E0;
+
+  a {
+    text-decoration: none;
+    color: #BC85A3;
+  }
 }

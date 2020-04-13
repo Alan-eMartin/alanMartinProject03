@@ -1,3 +1,4 @@
+/* eslint-disable */
 // nameSpacing Object
 const memoryApp = {};
 
@@ -166,7 +167,7 @@ memoryApp.dealCards = () => {
   memoryApp.randomizedCards.forEach(card => {
     $(memoryApp.cardContainer).append(`
     <div class="memoryCard" data-card="${card.name}" tabindex="0">
-      <img src="./card-assets/cardBack.jpg" alt="cactus pattern" class="backFace" aria-label="You may select  this memory card">
+      <img src="./card-assets/cardBack.jpg" alt="cactus pattern" class="backFace" aria-label="You may select this memory card">
       <img src="${card.image}" alt="${card.alt}" class="frontFace">
     </div>`);
   });
@@ -231,9 +232,8 @@ memoryApp.unflipCards = function() {
 // 8. when all cards are matched, message comes up and asks player if they would like to try again. On click the page is reloaded.
 memoryApp.gameOver = function() {
   Swal.fire({
-    title: 'You did it!!',
-    text: 'All the cacti have returned safely to the terrarium!',
-    icon: '',
+    title: 'Congratulations! ',
+    text: 'Special thanks to the following: <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>',
     confirmButtonText: 'Try Again?',
   });
   // make-shift idea to prevent page reload from firing- note I tried ".this" and that did not work, this was the only thing I could do, will come back and edit for portfolio.
